@@ -1,0 +1,46 @@
+#login {
+	.view--header {
+		.view--title {
+
+		}
+	}
+
+	form {
+		width: 100%;
+		max-width: 25rem;
+		margin: 0 auto;
+
+		.form-group {
+			display: flex;
+			flex-direction: column;
+
+			width: 100%;
+			padding: 0;
+			margin: 0.8rem auto;
+
+			input {
+				font-size: 1rem;
+				padding: 0.75rem;
+				margin-top: 0.2rem;
+				color: #333;
+			}
+
+		}
+
+		button[type="submit"] {
+			width: 100%;
+		    padding: 1rem 0;
+		    margin-top: 1.5rem;
+		    font-size: 1rem;
+		    text-transform: uppercase;
+		    color: white;
+		    border: none;
+		    background: #1a3754;
+		    cursor: pointer;
+
+		    &:hover {
+		    	background-color: #274e75
+		    }
+		}
+	}
+}

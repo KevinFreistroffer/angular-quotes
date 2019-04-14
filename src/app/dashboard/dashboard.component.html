@@ -1,0 +1,61 @@
+<div id="dashboard" class="view">
+	<!-- Loader -->
+	<div id="dashboard--loader" *ngIf="isLoading">
+		<div id="loader">
+			<img src="assets/loadingGif.gif" alt="" />
+		</div>
+	</div>
+
+	<!-- Header -->
+	<div class="view--header">
+		<h1 class="view--title">{{ viewTitle }}</h1>
+		<div></div>
+	</div>
+
+	<!-- Main Content ( quotes ) -->
+	<div
+		id="dashboard--quotes"
+		class="flex column justify-center align-center"
+		*ngIf="!isLoading"
+	>
+		<!-- Refresh & Save Quotes Buttons and text -->
+		<div class="flex column center-all">
+			<div class="flex row space-around align-center">
+				<button id="refresh-quotes" type="button" (click)="refresh()">
+					Refresh
+				</button>
+				<button
+					id="save-quotes"
+					type="button"
+					(click)="saveFavoriteQuotes()"
+				>
+					Save My Favorite Quotes
+				</button>
+			</div>
+			<div>Click a quote to save it as your favorite.</div>
+		</div>
+
+		<!-- List of quotes -->
+		<div>
+			I've saved {{favoritedQuotes.length}} quotes!
+			<ul id="quotes-ul" *ngIf="quotes && quotes.length > 0">
+				<li
+					*ngFor="let quote of quotes; let i = index"
+					class=""
+				>
+					<label htmlFor="quote" class="flex justify-start align-center">
+						<input
+						id="quote"
+						name="quote"
+						type="checkbox"
+						(checked)="quotes[i].checked"
+						(change)="quotes[i].checked = !quotes[i].checked; handleOnChange(quote)"
+						value=""
+					/>
+					{{ quote.value }}
+					</label>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,135 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+  text-decoration: none;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+} 
+
+.flex {
+  display: flex !important; }
+
+.row {
+  flex-direction: row !important; }
+
+.column {
+  flex-direction: column !important; }
+
+.center-all {
+  justify-content: center;
+  align-items: center !important; } 
+
+.align-center {
+  align-items: center !important; }
+
+.align-start {
+  align-items: flex-start !important; }
+
+.align-end {
+  align-items: flex-end !important; }
+.align-stretch {
+  align-items: stretch !important;
+}
+.justify-start {
+  justify-content: flex-start !important; }
+
+.justify-end {
+  justify-content: flex-end !important; }
+
+.justify-center {
+  justify-content: center !important; }
+
+.space-around {
+  justify-content: space-around !important;
+}
+
+.space-between {
+  justify-content: space-between !important; }
+
+.wrap  {
+  flex-wrap: wrap !important;
+}
+
+#app--title {
+	font-size: 2.5rem;
+  text-transform: uppercase;
+	text-align: left;
+  font-weight: bold;
+}
+
+.view {
+  padding: 2rem;
+}
+
+header {
+  padding: 1rem;
+  background-color: #eee;
+  border-bottom: 1px solid #fff;
+
+  nav {
+    a { 
+      margin: 0 0.5rem;
+      color: #333; 
+
+      &:hover {
+        color: #000;
+      }
+    }
+
+    #header--logout {
+      cursor: pointer;
+    }
+  }
+}
+
+* {
+  transition: all 0.1s linear;
+}

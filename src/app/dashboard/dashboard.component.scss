@@ -1,0 +1,75 @@
+#dashboard {
+	height: 100%;
+	min-height: 100%;
+	padding: 5%;
+
+	#dashboard--title {
+		font-size: 2rem;
+		text-align: center;
+		margin-bottom: 2rem;
+	}
+
+	#dashboard--loader {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-color: #fff;
+		z-index: 9999999;
+	}	
+
+	#dashboard--quotes {
+
+		button {
+			width: auto;
+		    padding: 0.5rem 1.5rem;
+		    margin: 1rem auto;
+		    background-color: #f1368e;
+		    color: #fff;
+		    font-size: 1.25rem;
+		    text-transform: uppercase;
+		    border: none !important;
+		    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.56);
+		    cursor: pointer;
+
+		    &:hover {
+		    	background-color: #f14194;
+		    }	
+		}
+
+		#refresh-quotes {
+
+		}
+
+		#quotes-ul {
+			width: 90%;
+			margin: 0 auto;
+
+			li {
+				padding: 0.5rem;
+				margin: 0.25rem auto;
+				line-height: 1.5rem;
+				background-color: #eee;
+				cursor: pointer;
+
+				&:hover {
+					background-color: #ddd;
+				}
+
+				&.selected {
+					background-color: #ccc;
+				}
+
+				input[type="checkbox"] {
+					margin-right: 0.75rem; 
+				}
+
+				label, input { cursor: pointer; }
+			}
+		}
+	}
+}
